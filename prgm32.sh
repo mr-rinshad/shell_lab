@@ -1,24 +1,28 @@
-#include <stdio.h>
+#!/bin/bash
 
-int main() {
-    int start, end, i;
+echo "Enter starting number:"
+read start
 
-    printf("Enter starting number: ");
-    scanf("%d", &start);
+echo "Enter ending number:"
+read end
 
-    printf("Enter ending number: ");
-    scanf("%d", &end);
+echo "Even numbers:"
+for (( i=start; i<=end; i++ ))
+do
+    if (( i % 2 == 0 ))
+    then
+        echo -n "$i "
+    fi
+done
 
-    printf("\nEven numbers:\n");
-    for(i = start; i <= end; i++) {
-        if(i % 2 == 0)
-            printf("%d ", i);
-    }
+echo
+echo "Odd numbers:"
+for (( i=start; i<=end; i++ ))
+do
+    if (( i % 2 != 0 ))
+    then
+        echo -n "$i "
+    fi
+done
 
-    printf("\n\nOdd numbers:\n");
-    for(i = start; i <= end; i++) {
-        if(i % 2 != 0)
-            printf("%d ", i);
-    }
-
-    return 0;
+echo
