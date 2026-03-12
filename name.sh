@@ -1,4 +1,4 @@
-echo "Enter your name:"
-read name
-echo "Your name is: $name"
+echo "Enter your fname:"
+read fname
+echo "Your fname is: $fname"
 
